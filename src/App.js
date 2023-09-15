@@ -1,24 +1,52 @@
-import logo from './logo.svg';
 import './App.css';
+import {HashRouter, Route,Link, Routes} from "react-router-dom";
+import Context from "./Context";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+    <Context>
+    <HashRouter>
+      <header>
+      <div>
+        <img src='#'/>
+      </div>
       </header>
-    </div>
+
+     
+
+      <footer>
+        <nav>
+         <ul>
+          <li>
+            <Link>
+            <img src='#'/>
+            <p>내 서재</p>
+            </Link>
+          </li>
+          <li>
+            <Link>
+            <img src='#'/>
+            <p>홈</p>
+            </Link>
+          </li>
+          <li>
+            <Link>
+            <img src='#'/>
+            <p>클립</p>
+            </Link>
+          </li>
+         </ul> 
+        </nav>
+      </footer>
+      <Routes>
+        <Route>
+
+        </Route>
+      </Routes>
+    </HashRouter>
+    </Context>
+    </>
   );
 }
 
