@@ -1,41 +1,44 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
 
-function History() {
+function MybookDetail() {
   return (
     <div>
-       <header>
-        <div>
-          <img src="#" />
-        </div>
-      </header>
       <div>
+      <div> - </div>
+        <div>
+          <img src="" />
+          <p>첵 제목</p>
+          <p>저자</p>
+          <button>상세보기</button>
+        </div>
+        <ul>
+          <li>나는 이 책을</li>
+          <li>읽는 중</li>
+          <li>완독</li>
+        </ul>
+        <div>
+          <p>
+            나의 독서 클립(<span>0</span>)
+          </p>
+          <button>클립하기</button>
+        </div>
         <ul>
           <li>
-            <ul>
-              <li>
-                <lmg src="" />
-              </li>
-              <li>
-                <lmg src="" />
-              </li>
-            </ul>
             <div>
-              <img src="" />
-              <p>책 제목</p>
-            </div>
-            <div>
+                <ul>
+                    <li><lmg src=''/></li>
+                    <li><lmg src=''/></li>
+                </ul>
+              <div>page<span>153</span><span>2013.02.58</span></div>
               <b>그래서 어쩌구 그래서 그랬어</b>
               <p>이 문장을 읽고 난 뒤 어저구 저쩌구 했다</p>
-              <div>
-                page<span>153</span>
-                <span>2013.02.58</span>
-              </div>
+              <p>공유된 클림</p>
             </div>
           </li>
         </ul>
       </div>
-       <footer>
+      <footer>
         <nav>
           <ul>
             <li>
@@ -60,7 +63,7 @@ function History() {
         </nav>
       </footer>
     </div>
-  )
+  );
 }
 
-export default History
+export default MybookDetail;

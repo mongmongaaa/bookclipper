@@ -1,6 +1,14 @@
-import './App.css';
+import './App.scss';
 import {HashRouter, Route,Link, Routes} from "react-router-dom";
 import Context from "./Context";
+import Home from "./page/Home";
+import Login from './page/Login';
+import Write from './page/Write';
+import History from './page/History';
+import Search from './page/Search';
+import MyBookList from './page/MyBookList';
+import BookDetail from './page/BookDetail';
+import MybookDetail from './page/MybookDetail';
 
 function App() {
   return (
@@ -12,38 +20,19 @@ function App() {
         <img src='#'/>
       </div>
       </header>
-
-     
-
-      <footer>
-        <nav>
-         <ul>
-          <li>
-            <Link>
-            <img src='#'/>
-            <p>내 서재</p>
-            </Link>
-          </li>
-          <li>
-            <Link>
-            <img src='#'/>
-            <p>홈</p>
-            </Link>
-          </li>
-          <li>
-            <Link>
-            <img src='#'/>
-            <p>클립</p>
-            </Link>
-          </li>
-         </ul> 
-        </nav>
-      </footer>
+      <main>
+        
+      </main>
       <Routes>
-        <Route>
-
-        </Route>
-      </Routes>
+      <Route path="/Login" element={<Login/>}/>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/Write" element={<Write/>}/>
+      <Route path="/History" element={<History/>}/>
+      <Route path="/Search" element={<Search/>}/>
+      <Route path="/MyBookList" element={<MyBookList/>}/>
+      <Route path="/BookDetail" element={<BookDetail/>}/>
+      <Route path="/MybookDetail" element={<MybookDetail/>}/>
+    </Routes>
     </HashRouter>
     </Context>
     </>

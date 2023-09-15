@@ -5,9 +5,9 @@ export const DataContext = createContext();
 
 function Context({children}) {
   return (
-    <DataContext.Provider value={ss}>
+   <DataContext.Provider >
        {children}
-    </DataContext.Provider>
+    </DataContext.Provider> 
   )
 }
 
