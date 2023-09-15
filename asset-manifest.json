@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bookclipper/static/css/main.7e3c1b77.css",
+    "main.js": "/bookclipper/static/js/main.d4e5d400.js",
+    "static/js/787.05de224f.chunk.js": "/bookclipper/static/js/787.05de224f.chunk.js",
+    "index.html": "/bookclipper/index.html",
+    "main.7e3c1b77.css.map": "/bookclipper/static/css/main.7e3c1b77.css.map",
+    "main.d4e5d400.js.map": "/bookclipper/static/js/main.d4e5d400.js.map",
+    "787.05de224f.chunk.js.map": "/bookclipper/static/js/787.05de224f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e3c1b77.css",
+    "static/js/main.d4e5d400.js"
+  ]
+}
