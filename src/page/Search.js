@@ -1,47 +1,56 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { Link,useParams } from "react-router-dom";
+import AladinBookSearch from "../comp/AladinBookSearch";
+import React, { useContext } from "react";
+import { BookDataContext } from "../Context";
 
 function Search() {
+  const { books } = useContext(BookDataContext);
+  const { userId } = useParams();
+
   return (
-    <div>
+    <div id="search_pading">
       <header>
         <div>
-          <img src="#" />
+        <img src="/bookclipper/logo_small.png"/>
         </div>
       </header>
-      <form>
-        <input type="search" name="q"></input>
-        <input type="submit" placeholder="도서를 검색하세요." />
-      </form>
-      <ul>
-        <li>
-          <div>
-            <img src=""/>
-          </div>
-          <div>
-            <p>아몬드</p>
-            <p><span>저자저자</span>·<span>비룡문학</span>·<span>2013.25.35</span></p>
-          </div>
-        </li>
+      <AladinBookSearch/>
+      <ul id="search_ul">
+        {books.map((item) => (
+          <Link key={item.isbn} to={`/BookDetail/search/${userId}/${item.isbn}`} state={{bookData: item.isbn}}>
+          <li>
+            <div>
+              <img src={`${item.cover}`}/>
+            </div>
+            <div className="search_text" >
+              <b>{item.title}</b>
+              <p>
+                <span>{item.author}</span>·<span>{item.publisher}</span>·
+                <span>{item.pubDate}</span>
+              </p>
+            </div>
+          </li>
+          </Link>
+        ))}
       </ul>
       <footer>
         <nav>
           <ul>
             <li>
-              <Link to="/MyBookList">
-                <img src="#" />
+              <Link to={`/MyBookList/${userId}`}>
+                <img src="/bookclipper/book_icon.png" />
                 <p>내 서재</p>
               </Link>
             </li>
             <li>
               <Link to="/">
-                <img src="#" />
+                <img src="/bookclipper/home_icon.png" />
                 <p>홈</p>
               </Link>
             </li>
             <li>
               <Link to="/History">
-                <img src="" />
+                <img src="/bookclipper/clip_icon.png" />
                 <p>클립</p>
               </Link>
             </li>

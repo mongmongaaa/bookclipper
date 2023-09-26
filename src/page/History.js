@@ -25,6 +25,7 @@ function History() {
               <p>책 제목</p>
             </div>
             <div>
+              <p><span>0007</span>님의 클립</p>
               <b>그래서 어쩌구 그래서 그랬어</b>
               <p>이 문장을 읽고 난 뒤 어저구 저쩌구 했다</p>
               <div>
